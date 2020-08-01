@@ -14,9 +14,12 @@
       integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
       crossorigin="anonymous"
     />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
     <link
       href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"
+    
     />
     <link rel="stylesheet" href="style.css" />
     <title>Work Day Scheduler</title>
@@ -30,6 +33,20 @@
     </header>
     <div class="container">
       <!-- Timeblocks go here -->
+      <div class="row">
+        <div class="col hour">
+          9am
+        </div>
+        <div class="col-9 bg-light">
+          <input type="text" class="form-control-plaintext" id="9am-text">
+        </div>
+        <div class="col saveBtn">
+          <a href="#" class="material-icons d-flex align-items-center justify-content-center" style="font-size:36px;color:black;">save_alt</a>
+          <!-- <button type="button" class="btn btn-link"><i class="material-icons md-36">save_alt</i></button>
+            <i class=" "></i> --> 
+        </div>
+      </div>
+
     </div>
     <!-- create array of days (Moment has # for each day) Modulus operator-->
 
