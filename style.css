@@ -21,6 +21,11 @@ textarea{
   border-bottom: 10px solid black;
 }
 
+p {
+  font-size: 20px;
+  text-align: center;
+}
+
 .description{
   white-space: pre-wrap;
 }
@@ -65,15 +70,10 @@ textarea{
   color: white;
 }
 
- a:hover {
-  text-decoration: none;
+ button:hover {
   background-color: lightskyblue;
-  
+  transition: all .3s ease-in-out;
 } 
 
-/* .material-icons {
-  text-decoration: none;
-  color: #ffffff;
-} */
 
 

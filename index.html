@@ -31,26 +31,18 @@
       <p class="lead">A simple calendar app for scheduling your work day</p>
       <p id="currentDay" class="lead"></p>
     </header>
-    <div class="container">
-      <!-- Timeblocks go here -->
-      <div class="row">
-        <div class="col hour">
-          9am
-        </div>
-        <div class="col-9 bg-light">
-          <input type="text" class="form-control-plaintext" id="9am-text">
-        </div>
-        <div class="col saveBtn">
-          <a href="#" class="material-icons d-flex align-items-center justify-content-center" style="font-size:36px;color:black;">save_alt</a>
-          <!-- <button type="button" class="btn btn-link"><i class="material-icons md-36">save_alt</i></button>
-            <i class=" "></i> --> 
-        </div>
-      </div>
 
-    </div>
-    <!-- create array of days (Moment has # for each day) Modulus operator-->
+    <main class="container">
+      <!-- Timeblocks go here -->
+      <section class="row" id="9">
+        <p class="col hour pt-4">9am</p>
+        <input type="text" class="col-9 bg-light description form-control-plaintext" id="9am-text">
+        <button class="col saveBtn btn material-icons"style="font-size:36px;color:black;">save_alt</button>
+      </section>
+    </main>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src= "./Assets/script.js"> </script>
   </body>
 </html>
