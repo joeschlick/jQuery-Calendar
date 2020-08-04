@@ -1,13 +1,19 @@
+//jQuery
 $(document).ready(function () {
+    
+  // Sets date in header
   $("#currentDay").text(moment().format("[Today is] dddd, MMMM Do YYYY"));
 
+  //Sets current hour for function below
   var currentHour = moment().hour();
   console.log(currentHour);
 
+  //grabs id for each row div
   $(".row > textarea").each(function () {
     var rowHour = $(this).attr("id");
     console.log(rowHour);
 
+    //Sets textarea color based on time of day
     if (rowHour > currentHour) {
       $(this).addClass("future");
     } else if (rowHour == currentHour) {
@@ -17,6 +23,7 @@ $(document).ready(function () {
     }
   });
 
+  //Saves text entered to local storage
   $(".saveBtn").on("click", function () {
     var setInput = $(this).siblings(".input").val();
     var setId = $(this).parent().attr("id");
@@ -24,6 +31,7 @@ $(document).ready(function () {
     window.localStorage.setItem(setId, setInput);
   });
 
+  //Sets stored text on page refresh
   $("#hour9 .input").val(localStorage.getItem("hour9"));
   $("#hour10 .input").val(localStorage.getItem("hour10"));
   $("#hour11 .input").val(localStorage.getItem("hour11"));
@@ -34,10 +42,3 @@ $(document).ready(function () {
   $("#hour16 .input").val(localStorage.getItem("hour16"));
   $("#hour17 .input").val(localStorage.getItem("hour17"));
 });
-
-/*$(".saveBtn").on("click", function() {
-    var setInput = $(this).siblings("input").val();
-    var setId = $(this).parent().attr("class");
-    console.log(setInput, setId);
-    window.localStorage.setItem(setInput, setId);
-})*/
